@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700, 600|Single+Day:400");
+
+.login-page {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  gap: 66px;
+  width: 1158px;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.sisi-kanan {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-top: 145px;
+  min-height: 359px;
+  width: 371px;
+}
+
+.sambutan {
+  align-self: flex-start;
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  height: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  width: 360px;
+}
+
+.masuk {
+  align-items: flex-start;
+  background-color: #000000;
+  border-radius: 10px;
+  display: block;
+  height: 39px;
+  justify-content: flex-end;
+  margin-right: 2px;
+  margin-top: 43px;
+  min-width: 316px;
+  padding: 7px 25px;
+}
+
+.continue {
+  color: #ffffff;
+  margin-top: 7.5px;
+  text-align: center;
+  margin-left: 25px;
+  width: 265px;
+}
+
+.input-password {
+  align-items: flex-start;
+  background-color: var(--white-2);
+  border: 3px solid;
+  border-color: var(--black);
+  border-radius: 10px;
+  display: flex;
+  height: 39px;
+  margin-right: 2px;
+  margin-top: 43px;
+  min-width: 316px;
+  padding: 4px 23px;
+}
+
+.password {
+  color: #000000;
+  height: 23px;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  opacity: 0.5;
+  top: 4px;
+  width: 265px;
+}
+
+.input-uname {
+  align-items: flex-start;
+  background-color: var(--white-2);
+  border: 3px solid;
+  border-color: var(--black);
+  border-radius: 10px;
+  display: flex;
+  height: 39px;
+  margin-right: 2px;
+  margin-top: 43px;
+  min-width: 316px;
+  padding: 4px 23px;
+}
+
+.uname {
+  color: #000000;
+  height: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  opacity: 0.5;
+  width: 265px;
+}
+
+.sisi-kiri {
+  background-color: #f9f9f9;
+  height: 651px;
+  position: relative;
+  width: 607px;
+}
+
+.slogan {
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  height: 24px;
+  left: 202px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 399px;
+  width: 179px;
+}
+
+.Baby {
+  height: 272px;
+  left: 134px;
+  object-fit: cover;
+  position: absolute;
+  top: 125px;
+  width: 314px;
+}
+
+.title {
+  color: black;
+  font-family: var(--font-family-single_day);
+  font-size: 30px;
+  font-weight: 400;
+  height: 209px;
+  left: 67px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 272px;
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
