@@ -1,7 +1,11 @@
+import { useNavigate, useParams } from "react-router-dom";
+
 function Inside() {
+  const navigate = useNavigate();
+  const { data } = useParams();
   return (
     <div>
-      <h1>this is inside</h1>
+      <h1>hello {data}</h1>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import LoginPage from "./Pages/Login";
 import NotFound from "./Pages/NotFound";
 import Home from "./Pages/Home";
+import Inside from "./Pages/Inside";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/detail/:data" element={<Inside />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </Router>
