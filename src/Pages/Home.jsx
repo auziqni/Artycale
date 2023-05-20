@@ -1,5 +1,5 @@
 import Table from "../Component/Teble";
-import LoginPage from "./Login";
+// import LoginPage from "./Login";
 
 function Home() {
   return (

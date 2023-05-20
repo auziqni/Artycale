@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Box, dividerClasses } from "@mui/material";
+import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Table() {

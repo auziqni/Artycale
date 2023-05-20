@@ -1,8 +1,8 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Graph from "../Component/Gpraph";
 
 function Inside() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { data } = useParams();
 
   return (
