@@ -9,13 +9,7 @@ function Table() {
   const getuser = async () => {
     try {
       let response = await axios.get(
-        "http://51.79.147.119/api/artycale/ReadAll.php",
-        {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json",
-          },
-        }
+        "http://51.79.147.119/api/artycale/ReadAll.php"
       );
       console.log(response.data);
       setItem(response.data);
@@ -32,7 +26,7 @@ function Table() {
     {
       field: "IdPel",
       headerName: "ID",
-      flex: 1,
+      flex: 0.5,
     },
     { field: "Date", headerName: "Tanggal" },
     {
@@ -46,6 +40,9 @@ function Table() {
       headerName: "Nama Orang Anak",
       flex: 1,
       cellClassName: "name-column--cell",
+      renderCell: (params) => (
+        <Link to={`/detail/${params.row.Child}`}>{params.row.Child}</Link>
+      ),
     },
     {
       field: "IdTele",
@@ -61,6 +58,7 @@ function Table() {
         rows={item}
         columns={columns}
         components={{ Toolbar: GridToolbar }}
+        getRowId={(row) => row.IdPel}
       />
     </Box>
   );
