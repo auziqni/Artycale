@@ -8,9 +8,7 @@ function Table() {
   const [item, setItem] = useState([]);
   const getuser = async () => {
     try {
-      let response = await axios.get(
-        "http://51.79.147.119/api/artycale/ReadAll.php"
-      );
+      let response = await axios.get("https://auziqni.com/ReadAll.php");
       console.log(response.data);
       setItem(response.data);
     } catch (e) {
