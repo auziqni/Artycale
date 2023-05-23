@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import axios from "axios";
+import TelegramMessage from "./TelegramSend";
 
 function Graph(params) {
   const [chartData, setChartData] = useState([]);
@@ -168,6 +169,7 @@ function Graph(params) {
         series={chartSeries}
         height={400}
       />
+      <TelegramMessage />
     </div>
   );
 }
