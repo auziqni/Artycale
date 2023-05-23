@@ -3,8 +3,10 @@ import Table from "../Component/Teble";
 
 function Home() {
   return (
-    //   <LoginPage></LoginPage>;
-    <Table />
+    <div>
+      <h1>selamat datang</h1>
+      <Table />
+    </div>
   );
 }
 

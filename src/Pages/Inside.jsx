@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Graph from "../Component/Gpraph";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Chart from "../Component/TestGraph";
 
 function Inside() {
   // const navigate = useNavigate();
@@ -45,8 +46,13 @@ function Inside() {
 
   return (
     <div>
-      <h1>dibawah ini adalah grpah dari {dataAnak.Parent} </h1>
+      <div>
+        <h1>{dataAnak.Child} </h1>
+        <h2>{dataAnak.Parent} </h2>
+      </div>
+
       <Graph child={data} />
+      {/* <Chart /> */}
     </div>
   );
 }

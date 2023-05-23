@@ -1,47 +1,24 @@
-import { useEffect, useState } from "react";
-import ReactApexChart from "react-apexcharts";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import ReactApexChart from "react-apexcharts";
 
-function Graph(params) {
+const Chart = () => {
   const [chartData, setChartData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [counter, setCounter] = useState(0);
-
-  const getuser = async () => {
-    setIsLoading(true);
-
-    try {
-      let response = await axios.post(
-        "https://auziqni.com/ReadOne.php",
-        {
-          child: params.child,
-        },
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
-      console.log(response.data);
-      setChartData(response.data);
-      setIsLoading(false);
-    } catch (e) {
-      console.log(e);
-      setIsLoading(false);
-    }
-  };
 
   useEffect(() => {
-    if (counter < 2) {
-      getuser();
-      const timer = setTimeout(() => {
-        setCounter(counter + 1);
-      }, 1000);
-      return () => {
-        clearTimeout(timer);
-      };
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("https://auziqni.com/mockdata.php");
+      //   const { data } = response;
+
+      setChartData(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
     }
-  }, [counter]);
+  };
 
   const formatChartData = () => {
     const categories = chartData.map((item) => item.Date);
@@ -158,11 +135,7 @@ function Graph(params) {
 
   return (
     <div>
-      <button onClick={getuser} disabled={isLoading}>
-        {isLoading ? "Memuat..." : "Refresh"}
-      </button>
-
-      <p1>TABLE BULANAN</p1>
+      <h2>Multiple Axis Chart</h2>
       <ReactApexChart
         options={chartOptions}
         series={chartSeries}
@@ -170,6 +143,6 @@ function Graph(params) {
       />
     </div>
   );
-}
+};
 
-export default Graph;
+export default Chart;
