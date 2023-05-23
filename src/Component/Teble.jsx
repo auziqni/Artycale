@@ -6,6 +6,7 @@ import axios from "axios";
 
 function Table() {
   const [item, setItem] = useState([]);
+  const [counter, setCounter] = useState(0);
   const getuser = async () => {
     try {
       let response = await axios.get("https://auziqni.com/ReadAll.php");
@@ -17,8 +18,16 @@ function Table() {
   };
 
   useEffect(() => {
-    getuser();
-  });
+    if (counter < 100) {
+      getuser();
+      const timer = setTimeout(() => {
+        setCounter(counter + 1);
+      }, 1000);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [counter]);
 
   const columns = [
     {
