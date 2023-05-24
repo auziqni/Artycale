@@ -2,10 +2,8 @@ import { useParams } from "react-router-dom";
 import Graph from "../Component/Gpraph";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Chart from "../Component/TestGraph";
 
 function Inside() {
-  // const navigate = useNavigate();
   const { data } = useParams();
   const [dataAnak, setDataAnak] = useState({});
   const [counter, setCounter] = useState(0);
@@ -47,12 +45,12 @@ function Inside() {
   return (
     <div>
       <div>
-        <h1>{dataAnak.Child} </h1>
-        <h2>{dataAnak.Parent} </h2>
-      </div>
+        <h1>Orang Tua: {dataAnak.Parent} </h1>
+        <h2>Anak: {dataAnak.Child}</h2>
+        <h2>Telegram: {dataAnak.IdTele} </h2>
 
-      <Graph child={data} />
-      {/* <Chart /> */}
+        <Graph child={data} />
+      </div>
     </div>
   );
 }

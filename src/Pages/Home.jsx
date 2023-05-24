@@ -1,5 +1,4 @@
 import Table from "../Component/Teble";
-import TelegramMessage from "../Component/TelegramSend";
 // import LoginPage from "./Login";
 
 function Home() {
@@ -7,7 +6,6 @@ function Home() {
     <div>
       <h1>selamat datang</h1>
       <Table />
-      {/* <TelegramMessage /> */}
     </div>
   );
 }

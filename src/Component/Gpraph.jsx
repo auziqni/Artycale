@@ -163,13 +163,14 @@ function Graph(params) {
         {isLoading ? "Memuat..." : "Refresh"}
       </button>
 
-      <p1>TABLE BULANAN</p1>
+      {/* {/* <p1>TABLE BULANAN</p1> */}
       <ReactApexChart
         options={chartOptions}
         series={chartSeries}
         height={400}
       />
-      <TelegramMessage />
+      <TelegramMessage data={chartData} />
+      {/* <TelegramMessage data={chartData}}/> */}
     </div>
   );
 }
