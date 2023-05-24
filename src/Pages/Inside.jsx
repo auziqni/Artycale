@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Graph from "../Component/Gpraph";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import MyForm from "../Component/From";
 
 function Inside() {
   const { data } = useParams();
@@ -48,6 +49,8 @@ function Inside() {
         <h1>Orang Tua: {dataAnak.Parent} </h1>
         <h2>Anak: {dataAnak.Child}</h2>
         <h2>Telegram: {dataAnak.IdTele} </h2>
+
+        <MyForm idpel={dataAnak.IdPel}></MyForm>
 
         <Graph child={data} />
       </div>
