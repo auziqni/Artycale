@@ -159,6 +159,7 @@ function Graph(params) {
 
   return (
     <div>
+      <TelegramMessage data={chartData} />
       <button onClick={getuser} disabled={isLoading}>
         {isLoading ? "Memuat..." : "Refresh"}
       </button>
@@ -169,7 +170,7 @@ function Graph(params) {
         series={chartSeries}
         height={400}
       />
-      <TelegramMessage data={chartData} />
+
       {/* <TelegramMessage data={chartData}}/> */}
     </div>
   );

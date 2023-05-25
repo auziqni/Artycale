@@ -42,15 +42,23 @@ function Inside() {
       };
     }
   }, [counter]);
+  const [showPopup, setShowPopup] = useState(false);
 
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
   return (
     <div>
       <div>
-        <h1>Orang Tua: {dataAnak.Parent} </h1>
-        <h2>Anak: {dataAnak.Child}</h2>
+        <h1>Nama Orang Tua: {dataAnak.Parent} </h1>
+        <h2>Nama Anak: {dataAnak.Child}</h2>
         <h2>Telegram: {dataAnak.IdTele} </h2>
-
-        <MyForm idpel={dataAnak.IdPel}></MyForm>
+        <button onClick={togglePopup}>Edit Pemilik</button>
+        {showPopup && (
+          <div className="popup">
+            <MyForm idpel={dataAnak.IdPel}></MyForm>
+          </div>
+        )}
 
         <Graph child={data} />
       </div>
