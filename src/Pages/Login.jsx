@@ -2,7 +2,7 @@ import Bayi from "../Image/Bayi.png";
 import LoginForm from "../Component/LoginForm";
 import "./Login.css";
 
-function LoginPage() {
+function Login() {
   return (
     <div class=" login-page screen">
       <div class="sisi-kiri">
@@ -17,4 +17,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default Login;

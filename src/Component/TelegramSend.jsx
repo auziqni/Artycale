@@ -4,7 +4,7 @@ import axios from "axios";
 const TelegramMessage = (props) => {
   const datas = props.data;
   const sendMessage = async () => {
-    const chatId = "1099351795"; // Ganti dengan ID chat Anda
+    const chatId = datas[0].IdTele; // Ganti dengan ID chat Anda
     const botToken = "6293749848:AAEcc3l8gmjghyGi27EhZUhwmFngwVcIlZM"; // Ganti dengan token bot Anda
     // const message = "Halo, ini pesan dari React!"; // Ganti dengan pesan yang ingin dikirim
     // const usersString = JSON.stringify(
@@ -33,7 +33,7 @@ const TelegramMessage = (props) => {
     }
   };
 
-  return <button onClick={sendMessage}>Kirim Pesan</button>;
+  return <button onClick={sendMessage}>Kirim pesan</button>;
 };
 
 export default TelegramMessage;

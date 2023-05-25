@@ -1,18 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import App from "./App";
-// import LoginPage from "./Pages/Login";
+
 import NotFound from "./Pages/NotFound";
 import Home from "./Pages/Home";
 import Inside from "./Pages/Inside";
+import App from "./App";
+import Login from "./Pages/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<App />} />
         <Route path="/detail/:data" element={<Inside />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>

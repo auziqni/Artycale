@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import "./LoginForm.css";
 
 import { useNavigate } from "react-router-dom";
 
-const LoginForm = () => {
+const App = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "admin") {
+    if (username === "admin" && password === "password") {
       console.log("asdas");
-      window.location.href = "/home";
+      window.location.href = "/";
     } else {
     }
   };
@@ -43,4 +42,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default App;
