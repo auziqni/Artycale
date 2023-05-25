@@ -10,7 +10,6 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username === "admin" && password === "password") {
-      console.log("asdas");
       window.location.href = "/";
     } else {
     }
