@@ -29,7 +29,7 @@ const MyForm = (params) => {
 
       console.log(response.data);
 
-      navigate("/");
+      navigate("/home");
 
       setParentName("");
       setChildName("");
