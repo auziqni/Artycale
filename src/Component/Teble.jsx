@@ -65,7 +65,7 @@ function Table() {
         rows={item}
         columns={columns}
         components={{ Toolbar: GridToolbar }}
-        getRowId={(row) => row.IdPel}
+        getRowId={(row) => row.No}
       />
     </Box>
   );
