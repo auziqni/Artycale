@@ -44,6 +44,12 @@ function Graph(params) {
     }
   }, [counter]);
 
+  var labelFormatter = function (value) {
+    var value = value + " M";
+
+    return value;
+  };
+
   const formatChartData = () => {
     const categories = chartData.map((item) => item.Date);
     const beratData = chartData.map((item) => item.SensWeight);
@@ -95,7 +101,7 @@ function Graph(params) {
               hideOverflowingLabels: false,
               total: {
                 enabled: false,
-                formatter: undefined,
+                formatter: labelFormatter,
               },
             },
           },
@@ -106,6 +112,11 @@ function Graph(params) {
         },
         yaxis: [
           {
+            labels: {
+              formatter: function (value) {
+                return value + " Kg";
+              },
+            },
             seriesName: "Berat",
             min: 2000,
             max: 15000,
@@ -114,6 +125,11 @@ function Graph(params) {
             },
           },
           {
+            labels: {
+              formatter: function (value) {
+                return value + " Cm";
+              },
+            },
             seriesName: "Panjang",
             opposite: true,
             min: 30,
@@ -123,6 +139,11 @@ function Graph(params) {
             },
           },
           {
+            labels: {
+              formatter: function (value) {
+                return value + " 'C";
+              },
+            },
             seriesName: "Suhu",
             opposite: true,
             min: 25,
