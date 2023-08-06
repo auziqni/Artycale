@@ -3,6 +3,7 @@ import ReactApexChart from "react-apexcharts";
 import axios from "axios";
 import TelegramMessage from "./TelegramSend";
 
+const newdata = [{}];
 function Graph(params) {
   const [chartData, setChartData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -13,7 +14,7 @@ function Graph(params) {
 
     try {
       let response = await axios.post(
-        "https://auziqni.com/ReadOne.php",
+        "https://myauziqni.site/artycale/ReadOne.php",
         {
           child: params.child,
         },

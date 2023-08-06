@@ -9,7 +9,9 @@ function Table() {
   const [counter, setCounter] = useState(0);
   const getuser = async () => {
     try {
-      let response = await axios.get("https://auziqni.com/ReadAll.php");
+      let response = await axios.get(
+        "https://myauziqni.site/artycale/ReadAll.php"
+      );
       console.log(response.data);
       setItem(response.data);
     } catch (e) {

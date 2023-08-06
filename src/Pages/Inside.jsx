@@ -12,7 +12,7 @@ function Inside() {
   const getuser = async () => {
     try {
       let response = await axios.post(
-        "https://auziqni.com/ReadOneDetiled.php",
+        "https://myauziqni.site/artycale/ReadOneDetiled.php",
         {
           child: data,
         },

@@ -13,7 +13,7 @@ const MyForm = (params) => {
 
     try {
       let response = await axios.post(
-        "https://auziqni.com/Update.php",
+        "https://myauziqni.site/artycale/Update.php",
         {
           Parent: parentName,
           Child: childName,
